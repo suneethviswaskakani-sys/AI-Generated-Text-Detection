@@ -1,0 +1,27 @@
+{
+  "n_examples": 200,
+  "original_accuracy": 0.995,
+  "perturbations": {
+    "lowercase": {
+      "flip_rate": 0.0,
+      "accuracy_after_perturbation": 0.995
+    },
+    "remove_punctuation": {
+      "flip_rate": 0.005,
+      "accuracy_after_perturbation": 0.99
+    },
+    "shuffle_sentences": {
+      "flip_rate": 0.005,
+      "accuracy_after_perturbation": 0.99
+    },
+    "extra_whitespace": {
+      "flip_rate": 0.0,
+      "accuracy_after_perturbation": 0.995
+    },
+    "typo_simulation": {
+      "flip_rate": 0.0,
+      "accuracy_after_perturbation": 0.995
+    }
+  },
+  "note": "flip_rate = fraction of predictions that changed class after the perturbation (instability, not necessarily wrong). accuracy_after_perturbation compares the perturbed prediction to ground truth. These are basic textual perturbations, not semantic paraphrasing -- a model robust to these can still be fooled by a real paraphrase; no paraphrasing tool was available in this environment to test that."
+}

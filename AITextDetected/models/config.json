@@ -1,0 +1,38 @@
+{
+  "weights": {
+    "word_tfidf_lr": 0.3359283333480861,
+    "char_tfidf_svm": 0.335742449322015,
+    "structural_gb": 0.32832921732989884
+  },
+  "threshold": 0.42999999999999994,
+  "feature_names": [
+    "char_count",
+    "word_count",
+    "sentence_count",
+    "paragraph_count",
+    "avg_word_length",
+    "word_length_std",
+    "avg_sentence_length",
+    "sentence_length_std",
+    "avg_paragraph_length",
+    "lexical_diversity",
+    "type_token_ratio",
+    "hapax_ratio",
+    "repetition_ratio",
+    "bigram_repetition",
+    "punctuation_density",
+    "comma_ratio",
+    "question_ratio",
+    "exclamation_ratio",
+    "uppercase_ratio",
+    "digit_ratio",
+    "function_word_ratio",
+    "stopword_ratio",
+    "word_entropy",
+    "sentence_entropy",
+    "burstiness",
+    "readability_flesch",
+    "syllables_per_word"
+  ],
+  "have_xgboost": false
+}

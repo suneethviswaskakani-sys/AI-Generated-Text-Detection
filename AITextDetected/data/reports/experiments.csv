@@ -1,0 +1,17 @@
+experiment_id,timestamp,dataset,protocol,model,features,hyperparameters,train_rows,valid_rows,test_rows,accuracy,precision,recall,f1,roc_auc,pr_auc,threshold,notes
+exp_1787647332,2026-08-25T08:42:12.959276+00:00,,random_stratified,ensemble_3_model,word+char+structural,,10400,2400,3200,0.993125,,,0.9911290322580645,0.9983539236548971,,0.43999999999999995,"baseline ensemble, AUC-weighted"
+exp_1787647332,2026-08-25T08:42:12.959508+00:00,,group_aware_prompt_name,ensemble_3_model,word+char+structural,,,,,,,,,,,,see group_aware section of training_metrics.json for full numbers
+exp_1787647470,2026-08-25T08:44:30.230929+00:00,,,word_tfidf_lr,word_tfidf,"{'C': np.float64(3.845401188473625), 'class_weight': None}",6000,,,,,,0.9857,,,,randomized_search_trial_0
+exp_1787647470,2026-08-25T08:44:30.231061+00:00,,,word_tfidf_lr,word_tfidf,"{'C': np.float64(1.934347898661638), 'class_weight': 'balanced'}",6000,,,,,,0.9864,,,,randomized_search_trial_1
+exp_1787647470,2026-08-25T08:44:30.231150+00:00,,,word_tfidf_lr,word_tfidf,"{'C': np.float64(6.086584841970366), 'class_weight': None}",6000,,,,,,0.9871,,,,randomized_search_trial_2
+exp_1787647470,2026-08-25T08:44:30.231213+00:00,,,word_tfidf_lr,word_tfidf,"{'C': np.float64(4.558327528535911), 'class_weight': None}",6000,,,,,,0.9864,,,,randomized_search_trial_3
+exp_1787647470,2026-08-25T08:44:30.231253+00:00,,,word_tfidf_lr,word_tfidf,"{'C': np.float64(0.6808361216819946), 'class_weight': 'balanced'}",6000,,,,,,0.9845,,,,randomized_search_trial_4
+exp_1787647470,2026-08-25T08:44:30.231289+00:00,,,word_tfidf_lr,word_tfidf,"{'C': np.float64(3.4370861113902182), 'class_weight': 'balanced'}",6000,,,,,,0.9873,,,,randomized_search_trial_5
+exp_1787647539,2026-08-25T08:45:39.566439+00:00,,,structural_gb,stylometric,"{'learning_rate': np.float64(0.08741722139252525), 'max_depth': 2, 'n_estimators': 64}",6000,,,,,,0.9217,,,,randomized_search_trial_0
+exp_1787647539,2026-08-25T08:45:39.566598+00:00,,,structural_gb,stylometric,"{'learning_rate': np.float64(0.1517589095260529), 'max_depth': 2, 'n_estimators': 70}",6000,,,,,,0.9325,,,,randomized_search_trial_1
+exp_1787647539,2026-08-25T08:45:39.566648+00:00,,,structural_gb,stylometric,"{'learning_rate': np.float64(0.04808335527963857), 'max_depth': 4, 'n_estimators': 124}",6000,,,,,,0.9391,,,,randomized_search_trial_2
+exp_1787647539,2026-08-25T08:45:39.566710+00:00,,,structural_gb,stylometric,"{'learning_rate': np.float64(0.10266480055385609), 'max_depth': 2, 'n_estimators': 149}",6000,,,,,,0.9377,,,,randomized_search_trial_3
+exp_1787647539,2026-08-25T08:45:39.566757+00:00,,,structural_gb,stylometric,"{'learning_rate': np.float64(0.045716027225949335), 'max_depth': 4, 'n_estimators': 199}",6000,,,,,,0.9435,,,,randomized_search_trial_4
+exp_1787647539,2026-08-25T08:45:39.566796+00:00,,,structural_gb,stylometric,"{'learning_rate': np.float64(0.030154084224878044), 'max_depth': 5, 'n_estimators': 87}",6000,,,,,,0.923,,,,randomized_search_trial_5
+exp_1792227482,2026-10-17T08:58:02.047310+00:00,,random_stratified,ensemble_3_model,word+char+structural,,10400,2400,3200,0.9928125,,,0.9907295445384925,0.9983896365332071,,0.42999999999999994,"baseline ensemble, AUC-weighted"
+exp_1792227482,2026-10-17T08:58:02.048314+00:00,,group_aware_prompt_name,ensemble_3_model,word+char+structural,,,,,,,,,,,,see group_aware section of training_metrics.json for full numbers

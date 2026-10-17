@@ -1,0 +1,25 @@
+2026-10-17 14:15:48,955 [INFO] data_pipeline: Loaded 44868 rows -> 44868 after cleaning (missing=0, empty=0, duplicates=0)
+2026-10-17 14:17:42,160 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:17:59,755 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:18:34,083 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:25:09,460 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:25:33,617 [INFO] data_pipeline: Loaded 44868 rows -> 44868 after cleaning (missing=0, empty=0, duplicates=0)
+2026-10-17 14:25:33,676 [INFO] train: FAST_MODE: subsampled to 16000 rows (stratified by label)
+2026-10-17 14:25:33,796 [INFO] train: === Protocol: random_stratified | train=10400 valid=2400 test=3200 ===
+2026-10-17 14:26:33,288 [INFO] train: Vectorization done in 59.5s (word_vocab=15000, char_vocab=8000)
+2026-10-17 14:26:33,478 [INFO] train: Word model trained in 0.2s
+2026-10-17 14:26:35,002 [INFO] train: Char model trained in 1.5s
+2026-10-17 14:26:58,101 [INFO] train: Structural model (GradientBoosting fallback) trained in 23.1s
+2026-10-17 14:28:06,647 [INFO] train: === Protocol: group_aware_prompt_name | train=9562 valid=4475 test=1963 ===
+2026-10-17 14:28:57,824 [INFO] train: Vectorization done in 51.2s (word_vocab=15000, char_vocab=8000)
+2026-10-17 14:28:58,082 [INFO] train: Word model trained in 0.3s
+2026-10-17 14:28:59,406 [INFO] train: Char model trained in 1.3s
+2026-10-17 14:29:20,970 [INFO] train: Structural model (GradientBoosting fallback) trained in 21.6s
+2026-10-17 14:29:59,643 [INFO] train: Training complete. Reports at data/reports/training_metrics.json, models at models/.
+2026-10-17 14:30:26,824 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:30:53,557 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:31:48,127 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:32:11,175 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:32:24,210 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:38:41,936 [INFO] predictor: Base models loaded successfully.
+2026-10-17 14:39:32,832 [INFO] predictor: Base models loaded successfully.

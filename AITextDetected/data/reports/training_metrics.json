@@ -1,0 +1,568 @@
+{
+  "random_stratified": {
+    "protocol": "random_stratified",
+    "train_rows": 10400,
+    "validation_rows": 2400,
+    "test_rows": 3200,
+    "weights": {
+      "word_tfidf_lr": 0.3359283333480861,
+      "char_tfidf_svm": 0.335742449322015,
+      "structural_gb": 0.32832921732989884
+    },
+    "threshold": 0.42999999999999994,
+    "individual_model_test_auc": {
+      "word_tfidf_lr": 0.9990226165142918,
+      "char_tfidf_svm": 0.9983793742118537,
+      "structural_gb": 0.9869980493379571
+    },
+    "validation": {
+      "accuracy": 0.9925,
+      "precision": 0.9946120689655172,
+      "recall": 0.9861111111111112,
+      "f1": 0.990343347639485,
+      "roc_auc": 0.997866896688618,
+      "pr_auc": 0.9975382167849162,
+      "confusion_matrix": [
+        [
+          1459,
+          5
+        ],
+        [
+          13,
+          923
+        ]
+      ],
+      "n_samples": 2400,
+      "class_balance": {
+        "0": 1464,
+        "1": 936
+      }
+    },
+    "test": {
+      "accuracy": 0.9928125,
+      "precision": 0.9967558799675588,
+      "recall": 0.9847756410256411,
+      "f1": 0.9907295445384925,
+      "roc_auc": 0.9983896365332071,
+      "pr_auc": 0.99842143330104,
+      "confusion_matrix": [
+        [
+          1948,
+          4
+        ],
+        [
+          19,
+          1229
+        ]
+      ],
+      "n_samples": 3200,
+      "class_balance": {
+        "0": 1952,
+        "1": 1248
+      }
+    }
+  },
+  "group_aware": {
+    "protocol": "group_aware_prompt_name",
+    "train_rows": 9562,
+    "validation_rows": 4475,
+    "test_rows": 1963,
+    "weights": {
+      "word_tfidf_lr": 0.3345055863849986,
+      "char_tfidf_svm": 0.3348053699420796,
+      "structural_gb": 0.3306890436729217
+    },
+    "threshold": 0.5549999999999999,
+    "individual_model_test_auc": {
+      "word_tfidf_lr": 0.9933575287196352,
+      "char_tfidf_svm": 0.993835851509149,
+      "structural_gb": 0.9795969657580336
+    },
+    "validation": {
+      "accuracy": 0.9877094972067039,
+      "precision": 0.9913494809688581,
+      "recall": 0.984959174903309,
+      "f1": 0.9881439965509808,
+      "roc_auc": 0.9971760940909845,
+      "pr_auc": 0.9980700024706732,
+      "confusion_matrix": [
+        [
+          2128,
+          20
+        ],
+        [
+          35,
+          2292
+        ]
+      ],
+      "n_samples": 4475,
+      "class_balance": {
+        "0": 2148,
+        "1": 2327
+      }
+    },
+    "test": {
+      "accuracy": 0.9740193581253184,
+      "precision": 0.9770833333333333,
+      "recall": 0.9214145383104125,
+      "f1": 0.948432760364004,
+      "roc_auc": 0.9960666733325587,
+      "pr_auc": 0.99088772997539,
+      "confusion_matrix": [
+        [
+          1443,
+          11
+        ],
+        [
+          40,
+          469
+        ]
+      ],
+      "n_samples": 1963,
+      "class_balance": {
+        "0": 1454,
+        "1": 509
+      }
+    }
+  },
+  "comparison": {
+    "random_stratified": {
+      "test_accuracy": 0.9928125,
+      "test_f1": 0.9907295445384925,
+      "test_roc_auc": 0.9983896365332071
+    },
+    "group_aware_prompt_name": {
+      "test_accuracy": 0.9740193581253184,
+      "test_f1": 0.948432760364004,
+      "test_roc_auc": 0.9960666733325587
+    },
+    "note": "The group-aware split holds entire essay prompts out of training. A meaningfully lower score here versus the random split indicates the random-split number was inflated by topic leakage between train and test."
+  },
+  "structural_permutation_importance": [
+    {
+      "feature": "comma_ratio",
+      "mean_auc_drop": 0.022211312234365496,
+      "std": 0.0022269622352124535
+    },
+    {
+      "feature": "word_length_std",
+      "mean_auc_drop": 0.021482185704777834,
+      "std": 0.0022264651465682974
+    },
+    {
+      "feature": "bigram_repetition",
+      "mean_auc_drop": 0.013941340753584552,
+      "std": 0.0009124202435260648
+    },
+    {
+      "feature": "avg_paragraph_length",
+      "mean_auc_drop": 0.00844712195250101,
+      "std": 0.0005589170890179701
+    },
+    {
+      "feature": "word_count",
+      "mean_auc_drop": 0.005534811983326268,
+      "std": 0.00035522695910963117
+    },
+    {
+      "feature": "syllables_per_word",
+      "mean_auc_drop": 0.003464650909579106,
+      "std": 0.0007005456730228757
+    },
+    {
+      "feature": "burstiness",
+      "mean_auc_drop": 0.0028138829048151848,
+      "std": 0.0005093398768261308
+    },
+    {
+      "feature": "punctuation_density",
+      "mean_auc_drop": 0.0027004044358039797,
+      "std": 0.0002579223872008674
+    },
+    {
+      "feature": "digit_ratio",
+      "mean_auc_drop": 0.002695569742188514,
+      "std": 0.0003436987713476978
+    },
+    {
+      "feature": "sentence_length_std",
+      "mean_auc_drop": 0.0025215207720329924,
+      "std": 0.0007627239745725378
+    },
+    {
+      "feature": "repetition_ratio",
+      "mean_auc_drop": 0.0018151081803744473,
+      "std": 0.00032602183216570615
+    },
+    {
+      "feature": "question_ratio",
+      "mean_auc_drop": 0.001202196738825767,
+      "std": 0.00023906571907691826
+    },
+    {
+      "feature": "hapax_ratio",
+      "mean_auc_drop": 0.001029242416281273,
+      "std": 0.0003826170422949564
+    },
+    {
+      "feature": "paragraph_count",
+      "mean_auc_drop": 0.0009798920531502026,
+      "std": 0.000142090127741381
+    },
+    {
+      "feature": "uppercase_ratio",
+      "mean_auc_drop": 0.0007956263719582357,
+      "std": 0.00014211917195099274
+    },
+    {
+      "feature": "exclamation_ratio",
+      "mean_auc_drop": 0.0007221025407500165,
+      "std": 0.0001241984261538507
+    },
+    {
+      "feature": "avg_sentence_length",
+      "mean_auc_drop": 0.00048593231866791986,
+      "std": 0.0001205496126597329
+    },
+    {
+      "feature": "function_word_ratio",
+      "mean_auc_drop": 0.00047525950446021537,
+      "std": 0.0001628515973815554
+    },
+    {
+      "feature": "char_count",
+      "mean_auc_drop": 0.0003760114543925608,
+      "std": 0.00012595465593406274
+    },
+    {
+      "feature": "sentence_count",
+      "mean_auc_drop": 0.0003719977464853863,
+      "std": 7.16367204449992e-05
+    },
+    {
+      "feature": "word_entropy",
+      "mean_auc_drop": 0.0002886220867777678,
+      "std": 0.00010486041047669218
+    },
+    {
+      "feature": "sentence_entropy",
+      "mean_auc_drop": 0.00019211065573765396,
+      "std": 5.488511404352964e-05
+    },
+    {
+      "feature": "avg_word_length",
+      "mean_auc_drop": 0.00017769779552556653,
+      "std": 0.0002752639131326466
+    },
+    {
+      "feature": "stopword_ratio",
+      "mean_auc_drop": 0.00015945366867489708,
+      "std": 8.004245504985472e-05
+    },
+    {
+      "feature": "readability_flesch",
+      "mean_auc_drop": 0.00012588447526963586,
+      "std": 0.00012744381238652915
+    },
+    {
+      "feature": "type_token_ratio",
+      "mean_auc_drop": 4.825571552000141e-05,
+      "std": 4.295620250199103e-05
+    },
+    {
+      "feature": "lexical_diversity",
+      "mean_auc_drop": 3.9498534631629556e-05,
+      "std": 4.986282080172748e-05
+    }
+  ],
+  "calibration": {
+    "brier_score": 0.010443087467383675,
+    "bins": [
+      {
+        "mean_predicted": 0.004111097235924916,
+        "fraction_positive": 0.0
+      },
+      {
+        "mean_predicted": 0.008054558444686177,
+        "fraction_positive": 0.003125
+      },
+      {
+        "mean_predicted": 0.013080797014569897,
+        "fraction_positive": 0.0
+      },
+      {
+        "mean_predicted": 0.02133593432704233,
+        "fraction_positive": 0.003125
+      },
+      {
+        "mean_predicted": 0.040340808278402716,
+        "fraction_positive": 0.003125
+      },
+      {
+        "mean_predicted": 0.1242824825536343,
+        "fraction_positive": 0.01875
+      },
+      {
+        "mean_predicted": 0.7595720389002703,
+        "fraction_positive": 0.871875
+      },
+      {
+        "mean_predicted": 0.9652478481776458,
+        "fraction_positive": 1.0
+      },
+      {
+        "mean_predicted": 0.9856743253784346,
+        "fraction_positive": 1.0
+      },
+      {
+        "mean_predicted": 0.9943669607979103,
+        "fraction_positive": 1.0
+      }
+    ],
+    "note": "A well-calibrated model has fraction_positive close to mean_predicted in each bin. Brier score (mean squared error of the probability) closer to 0 is better; 0.25 is the score of a coin-flip classifier on a balanced dataset."
+  },
+  "calibration_method_comparison": {
+    "raw_brier": 0.010443087467383675,
+    "platt_brier": 0.006503330938137276,
+    "isotonic_brier": 0.006413036228104567
+  },
+  "error_analysis": {
+    "n_test": 3200,
+    "n_false_positives": 4,
+    "n_false_negatives": 19,
+    "n_uncertain": 6,
+    "false_positive_rate": 0.0020491803278688526,
+    "false_negative_rate": 0.015224358974358974,
+    "false_positive_examples": [
+      {
+        "text_preview": "The developement of driverless cars is an important, and significant technological milestone. Driverless cars are a perfect example of how well we have devoloped sensory, atomotive, and GPS systems. T",
+        "true_label": 0,
+        "predicted_score": 0.5727544274598149,
+        "source": "persuade_corpus",
+        "prompt_name": "Driverless cars"
+      },
+      {
+        "text_preview": "Hang Up the Phone or Hang Up Your Life\n\nIn today's modern era, people's use and dependency on technology has drastically increased. According to the Pew Research Center, an estimated five billion cell",
+        "true_label": 0,
+        "predicted_score": 0.4412229290650649,
+        "source": "persuade_corpus",
+        "prompt_name": "Phones and driving"
+      },
+      {
+        "text_preview": "Wow! The use of the technology can read the emotional expression, the Facial Action Coding System is amazing. Some new computer software can recognize people expression. Computer can recognize our fac",
+        "true_label": 0,
+        "predicted_score": 0.44202142702267805,
+        "source": "persuade_corpus",
+        "prompt_name": "Facial action coding system"
+      },
+      {
+        "text_preview": "I agree with the principal's decision that all students must participate in at least one extracurricular activity in school because it is an excellent way to find interests in leisure time, improve pe",
+        "true_label": 0,
+        "predicted_score": 0.5489104912799356,
+        "source": "persuade_corpus",
+        "prompt_name": "Mandatory extracurricular activities"
+      }
+    ],
+    "false_negative_examples": [
+      {
+        "text_preview": " It is often said that you can not make a child, teenager, or adult do what they do not want to do. Imagine starting a new school year; students are ready to learn, to take classes they will really en",
+        "true_label": 1,
+        "predicted_score": 0.007720257299859878,
+        "source": "mistral7binstruct_v2",
+        "prompt_name": "Distance learning"
+      },
+      {
+        "text_preview": " Nobody ever said that writing an argumentative essay on whether or not driverless cars are a good idea is easy. There are strong points on both sides of the issue - someone might even say that there ",
+        "true_label": 1,
+        "predicted_score": 0.017925338381333176,
+        "source": "cohere-command",
+        "prompt_name": "Driverless cars"
+      },
+      {
+        "text_preview": " People should make their own decisions to avoid bad guidance from others.\n\nEveryone should make their own decisions because they know themselves better, they know what they like and what they want, m",
+        "true_label": 1,
+        "predicted_score": 0.03889129641279456,
+        "source": "mistral7binstruct_v2",
+        "prompt_name": "Seeking multiple opinions"
+      },
+      {
+        "text_preview": "Are driverless cars really the future of transportation? I think they\u2019re a terrible idea.\n\nSure, some people might say that driverless cars will reduce accidents, since computers don\u2019t get distracted ",
+        "true_label": 1,
+        "predicted_score": 0.07643884128600963,
+        "source": "llama_70b_v1",
+        "prompt_name": "Driverless cars"
+      },
+      {
+        "text_preview": " Dear Teacher,\n\nI've been asked if it is more beneficial to work in a group with students or to work alone. In my opinion, I believe that working as a group is more advantageous than doing all the wor",
+        "true_label": 1,
+        "predicted_score": 0.098503777322816,
+        "source": "mistral7binstruct_v2",
+        "prompt_name": "Summer projects"
+      }
+    ],
+    "feature_comparison": [
+      {
+        "feature": "char_count",
+        "correct_mean": 2208.046899590809,
+        "false_positive_mean": 2507.25,
+        "false_negative_mean": 1987.7368421052631
+      },
+      {
+        "feature": "word_count",
+        "correct_mean": 383.663204280768,
+        "false_positive_mean": 397.75,
+        "false_negative_mean": 366.89473684210526
+      },
+      {
+        "feature": "sentence_count",
+        "correct_mean": 19.54705697198615,
+        "false_positive_mean": 23.5,
+        "false_negative_mean": 19.894736842105264
+      },
+      {
+        "feature": "paragraph_count",
+        "correct_mean": 5.5262826565942715,
+        "false_positive_mean": 6.75,
+        "false_negative_mean": 5.105263157894737
+      },
+      {
+        "feature": "avg_word_length",
+        "correct_mean": 4.615708135407667,
+        "false_positive_mean": 5.1488142556248855,
+        "false_negative_mean": 4.298475075621645
+      },
+      {
+        "feature": "word_length_std",
+        "correct_mean": 2.416317677753805,
+        "false_positive_mean": 2.913960758531026,
+        "false_negative_mean": 2.181009520374291
+      },
+      {
+        "feature": "avg_sentence_length",
+        "correct_mean": 21.17442439483243,
+        "false_positive_mean": 17.42721372396509,
+        "false_negative_mean": 19.4367511432728
+      },
+      {
+        "feature": "sentence_length_std",
+        "correct_mean": 8.924683971258998,
+        "false_positive_mean": 9.035242976762405,
+        "false_negative_mean": 9.143081426183203
+      },
+      {
+        "feature": "avg_paragraph_length",
+        "correct_mean": 82.11264268265215,
+        "false_positive_mean": 65.38214285714285,
+        "false_negative_mean": 76.84736842105264
+      },
+      {
+        "feature": "lexical_diversity",
+        "correct_mean": 0.45358107351343013,
+        "false_positive_mean": 0.4729490529173425,
+        "false_negative_mean": 0.4137150532571183
+      },
+      {
+        "feature": "type_token_ratio",
+        "correct_mean": 0.45358107351343013,
+        "false_positive_mean": 0.4729490529173425,
+        "false_negative_mean": 0.4137150532571183
+      },
+      {
+        "feature": "hapax_ratio",
+        "correct_mean": 0.6107032532140901,
+        "false_positive_mean": 0.644763290414083,
+        "false_negative_mean": 0.554053503644898
+      },
+      {
+        "feature": "repetition_ratio",
+        "correct_mean": 0.5464189264865698,
+        "false_positive_mean": 0.5270509470826574,
+        "false_negative_mean": 0.5862849467428817
+      },
+      {
+        "feature": "bigram_repetition",
+        "correct_mean": 0.16559713581041183,
+        "false_positive_mean": 0.16300979404273863,
+        "false_negative_mean": 0.1854476444230045
+      },
+      {
+        "feature": "punctuation_density",
+        "correct_mean": 0.020822129974997942,
+        "false_positive_mean": 0.02681123515101553,
+        "false_negative_mean": 0.022115540984684084
+      },
+      {
+        "feature": "comma_ratio",
+        "correct_mean": 0.0074630337368760185,
+        "false_positive_mean": 0.010490264965506767,
+        "false_negative_mean": 0.007259218224977126
+      },
+      {
+        "feature": "question_ratio",
+        "correct_mean": 0.027760027610453937,
+        "false_positive_mean": 0.0,
+        "false_negative_mean": 0.07057188800915377
+      },
+      {
+        "feature": "exclamation_ratio",
+        "correct_mean": 0.018339845616131313,
+        "false_positive_mean": 0.01,
+        "false_negative_mean": 0.01717015504200859
+      },
+      {
+        "feature": "uppercase_ratio",
+        "correct_mean": 0.01988330072644021,
+        "false_positive_mean": 0.02825093137628431,
+        "false_negative_mean": 0.01965276798511496
+      },
+      {
+        "feature": "digit_ratio",
+        "correct_mean": 0.0014913564505180958,
+        "false_positive_mean": 0.005652173913043478,
+        "false_negative_mean": 0.00019698202133307626
+      },
+      {
+        "feature": "function_word_ratio",
+        "correct_mean": 0.3676224670122683,
+        "false_positive_mean": 0.32426375221571124,
+        "false_negative_mean": 0.38641234744372605
+      },
+      {
+        "feature": "stopword_ratio",
+        "correct_mean": 0.3676224670122683,
+        "false_positive_mean": 0.32426375221571124,
+        "false_negative_mean": 0.38641234744372605
+      },
+      {
+        "feature": "word_entropy",
+        "correct_mean": 6.692457336944871,
+        "false_positive_mean": 6.8821028375449576,
+        "false_negative_mean": 6.583067063838245
+      },
+      {
+        "feature": "sentence_entropy",
+        "correct_mean": 3.523795657404727,
+        "false_positive_mean": 3.740928596059499,
+        "false_negative_mean": 3.590825321835017
+      },
+      {
+        "feature": "burstiness",
+        "correct_mean": 0.42471713525397947,
+        "false_positive_mean": 0.5591823320794126,
+        "false_negative_mean": 0.46691127710268215
+      },
+      {
+        "feature": "readability_flesch",
+        "correct_mean": 58.39752496282932,
+        "false_positive_mean": 44.24389526205167,
+        "false_negative_mean": 72.00523831558174
+      },
+      {
+        "feature": "syllables_per_word",
+        "correct_mean": 1.5005370481845834,
+        "false_positive_mean": 1.7127953050605647,
+        "false_negative_mean": 1.3605373436642596
+      }
+    ]
+  }
+}
