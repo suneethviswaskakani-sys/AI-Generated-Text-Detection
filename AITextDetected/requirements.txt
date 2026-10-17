@@ -21,3 +21,4 @@ xgboost>=1.7.0          # GPU/Tree booster fallback
 # Optional Deep Learning & Transformer Branch (Model D)
 torch>=2.0.0            # Neural backend
 transformers>=4.30.0     # HuggingFace sequence classification
+gunicorn
